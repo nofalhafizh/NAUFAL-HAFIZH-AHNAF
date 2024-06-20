@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portofolio || Naufal Hafizh Ahnaf</title>
+<!-- ini buat font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap" rel="stylesheet">
+<!-- ini buat font -->
+<!-- style -->
+<link rel="stylesheet" href="css/style.css">
+<!-- style -->
+<!-- ini buat script -->
+<script>
+  function showThankYouMessage() {
+    document.getElementById('form').style.display = 'none';
+    document.getElementById('thank-you-message').style.display = 'block';
+  }
+  
+  function scrollToSection(id) {
+    const element = document.getElementById(id);
+    element.scrollIntoView({ behavior: 'smooth' });
+  }
+  
+  function toggleMenu() {
+    const navList = document.querySelector('.nav-list');
+    navList.classList.toggle('active');
+  }
+
+  function showWhatsApp() {
+    const whatsappMessage = document.getElementById('whatsapp-message');
+    whatsappMessage.style.display = 'block';
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    showThankYouMessage();
+    showWhatsApp();
+  }
+</script>
+<!-- ini buat script -->
+</head>
+<body>
+<!-- header -->
+<header>
+  <div class="container">
+    <p>Naufal Hafizh Ahnaf</p>
+    <nav>
+      <div class="menu-toggle" onclick="toggleMenu();">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-list">
+        <li><a href="javascript:void(0);" onclick="scrollToSection('about')">About me</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('skill')">Skill</a></li>
+        <li><a href="javascript:void(0);" onclick="scrollToSection('kontak')">Contact me</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+<!-- header -->
+<!-- jumbotron -->
+<section class="jumbotron">
+  <img src="assets/profile.jpg" alt="naufal-hafizh-ahnaf" width="200">
+  <h2>NAUFAL HAFIZH AHNAF</h2>
+  <p class="typing-text">Front-End Developer || Universitas Gunadarma</p>
+</section>
+<!-- jumbotron -->
+<!-- konten -->
+<main>
+  <section id="about">
+    <div class="about">
+      <h1>About Me</h1>
+      <p>Halo, Nama saya Naufal Hafizh Ahnaf saya kelahiran Klaten Tahun 2005, saat ini saya sedang menjalankan pendidikan S1 Jurusan Informatika dan cita-cita saya adalah untuk menjadi Front-end Developer, dan ini adalah web pertama buatan saya hasil belajar dari Dicoding.com, dan seterusnya saya akan lebih berkembang dengan belajar bahasa pemrograman lainnya seperti JavaScript, Python, Php dan yang lainnya</p>
+    </div>
+  </section>
+  <section id="skill">
+    <div class="skill">
+      <h1>Skill</h1>
+      <p>Bahasa Pemrograman yang dikuasai</p>
+      <img src="assets/html.jpg" alt="HTML">
+      <img src="assets/css.jpg" alt="CSS">
+      <img src="assets/js.jpg" alt="JavaScript">
+      <img src="assets/py.jpg" alt="Python">
+    </div>
+  </section>
+  <section id="kontak">
+    <h1>Berikan pendapat tentang Web saya</h1>
+    <div class="masuk" id="form">
+      <form action="#" onsubmit="handleSubmit(event);">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Masukan email anda" required>
+        <br>
+        <input type="text" placeholder="Masukan masukan anda" required>
+        <br>
+        <input type="submit" value="submit">
+      </form>
+    </div>
+    <div id="thank-you-message" style="display: none;">
+      <h2>Terima kasih!</h2>
+      <p>Pesan Anda telah terkirim.</p>
+    </div>
+    <div id="whatsapp-message" style="display: none;">
+      <p>Hubungi saya di WhatsApp: <a href="https://wa.me/6281234567890" target="_blank">+62 812-3456-7890</a></p>
+    </div>
+  </section>
+</main>
+<!-- footer -->
+<footer>
+  <p>&copy; 2024 Naufal Hafizh Ahnaf. All Rights Reserved.</p>
+</footer>
+<!-- footer -->
+</body>
+</html>
